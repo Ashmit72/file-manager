@@ -1,5 +1,8 @@
 {
   "$schema": "https://radianos.com/schema.json",
+   "registries": {
+        "@paceui-ui": "https://ui.paceui.com/r/{name}.json"
+    },
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils",

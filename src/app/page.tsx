@@ -13,6 +13,9 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
+import { RevealText } from "@/components/animations/text-reveal";
+import { TiltCard } from "@/components/animations/tilt-card";
+
 
 interface LandingPageProps {
   onGetStarted: () => void;
@@ -89,15 +92,21 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
               <Zap className="w-4 h-4" />
               Powered by AI & OCR
             </Badge>
+            <RevealText>
             <h1 className="mb-6 heading-1">
               Your Documents,
               <br />
               <span className=" text-fg-secondary">Organized & Searchable</span>
             </h1>
-            <p className="text-xl mb-8 ">
+            </RevealText>
+           
+            
+           <RevealText className="text-xl mb-8 " >
               Upload PDFs and images, extract text automatically, and find
               anything in seconds. The smart way to manage your documents.
-            </p>
+           </RevealText>
+            
+            
             <div className="flex items-center gap-4">
               <Button
                 asChild
@@ -121,6 +130,8 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
             </p>
           </div>
 
+
+          <TiltCard>
           <div className="relative">
             <div className="absolute inset-0 bg-linear-to-br from-info-hover to-info-focus rounded-2xl blur-3xl opacity-20"></div>
             <Card className="relative bg-bg p-8 shadow-2xl">
@@ -147,6 +158,7 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
               </div>
             </Card>
           </div>
+          </TiltCard>
         </div>
       </section>
 
@@ -154,6 +166,7 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
+            <RevealText>
             <h2 className="heading-5 mb-4">
               Everything you need to manage documents
             </h2>
@@ -161,6 +174,8 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
               Powerful features designed to make document management effortless
               and efficient
             </p>
+            </RevealText>
+              
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
